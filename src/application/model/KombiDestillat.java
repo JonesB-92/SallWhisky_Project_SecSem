@@ -35,14 +35,12 @@ public class KombiDestillat extends Destillat{
         this.destillater = new ArrayList<>();
     }
 
-
     public boolean indeholderDestillat(Destillat destillat) {
         boolean indeholderDestillat = false;
 
         if(destillater.contains(destillat)) {
             indeholderDestillat = true;
         }
-
         else {
             int i = 0;
             while(!indeholderDestillat && i < destillater.size()) {

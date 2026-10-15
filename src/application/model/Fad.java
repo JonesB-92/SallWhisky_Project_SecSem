@@ -126,10 +126,12 @@ public class Fad extends Storable {
         double originalMængde = mængdeL;
         mængdeL += påhældningsMængde;
 
+        //Hvis indhold er det samme destillat
         if(fadIndhold == null || fadIndhold == destillat) {
             indholdEfterPåfyldning = destillat;
         }
         else {
+            // hvis kombi => kombidestillat
             String nytNavn = fadIndhold.getNavn() + "-" + destillat.getNavn();
             indholdEfterPåfyldning = new KombiDestillat(nytNavn, dato, init);
             Maltbatch indholdMalt = fadIndhold.getMaltbatch();
